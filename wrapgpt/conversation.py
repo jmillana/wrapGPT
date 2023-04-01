@@ -54,11 +54,6 @@ class Conversation:
         self._messages.append(message)
         self.cost += message.cost
 
-    @property
-    def total_tokens(self) -> int:
-        """Return the total number of tokens in the conversation."""
-        return self.cost.total
-
     def add_cost(self, cost: Cost) -> None:
         """Set the cost of the conversation."""
         self.cost += cost

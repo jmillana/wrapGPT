@@ -3,6 +3,8 @@ from dataclasses import dataclass, field
 
 from .cost import Cost
 
+# Build test for the following class
+
 
 @dataclass
 class Message:

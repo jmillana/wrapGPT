@@ -5,7 +5,7 @@ import dotenv
 import openai
 import typer
 
-from src import cli
+from wrapgpt import cli
 
 dotenv.load_dotenv()
 

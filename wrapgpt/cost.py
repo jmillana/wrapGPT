@@ -17,6 +17,13 @@ class Cost:
     prompt_tokens: int = 0
     completion_tokens: int = 0
 
+    def __post_init__(self):
+        """Ensure that the cost is always positive."""
+        if self.prompt_tokens < 0:
+            raise ValueError("Prompt tokens must be positive.")
+        if self.completion_tokens < 0:
+            raise ValueError("Completion tokens must be positive.")
+
     @property
     def total(self) -> int:
         """Total number of tokens in the prompt and response.
